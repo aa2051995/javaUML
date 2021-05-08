@@ -6,6 +6,7 @@ public class Account {
 	private String password ;
 	private String email;
 	private String address;
+	private Order cust_orders[];
 	public Account(String l_name, String l_email,
 			String l_phone, String l_password, String l_address)
 	{
