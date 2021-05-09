@@ -16,6 +16,9 @@ public Order( String l_order_code, ArrayList<Product>  l_products ) {
 	ord_code = l_order_code;
 	ord_date = LocalDate.now();
 }
+public ArrayList<Product> getAllProduct(){
+	return products;
+}
 public LocalDate getOrd_date() {
 	return ord_date;
 }
