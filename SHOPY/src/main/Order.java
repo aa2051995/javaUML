@@ -10,6 +10,7 @@ private String status;
 private String ord_code;
 private ArrayList<Product> products ; 
 public Order( String l_order_code, ArrayList<Product>  l_products ) {
+	products = new ArrayList<Product>();
 	for(Product pro: l_products)
 		products.add(pro);
 	status = "initiated";
