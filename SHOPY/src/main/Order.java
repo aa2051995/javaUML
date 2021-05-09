@@ -1,14 +1,20 @@
 package main;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Order {
 private LocalDate ord_date;
 private LocalDate ord_dilver_date;
 private String status;
 private String ord_code;
-public String addProduct_to_order() {
-	return "ok";
+private ArrayList<Product> products ; 
+public Order( String l_order_code, ArrayList<Product>  l_products ) {
+	for(Product pro: l_products)
+		products.add(pro);
+	status = "initiated";
+	ord_code = l_order_code;
+	ord_date = LocalDate.now();
 }
 public LocalDate getOrd_date() {
 	return ord_date;
