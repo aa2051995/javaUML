@@ -29,8 +29,10 @@ public Boolean remove_product (String Prod_code) {
  public Boolean Submit(Account account) {
 	 UUID uuid = UUID.randomUUID();
 	 Order order = new Order(uuid.toString(), products);
-	  if(account.make(order) == "ok")
+	  if(account.make(order) == "ok") {
+		  System.out.println("order is sucessfully issued"+order.getOrd_code());;
 		  return true;
+	  }
 	  return false;
  }
  
