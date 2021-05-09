@@ -1,4 +1,6 @@
 package main;
+import java.util.ArrayList;
+
 import main.Order;
 public class Account {
 	private String name;
@@ -6,10 +8,11 @@ public class Account {
 	private String password ;
 	private String email;
 	private String address;
-	private Order cust_orders[];
+	private ArrayList<Order> orders;
 	public Account(String l_name, String l_email,
 			String l_phone, String l_password, String l_address)
 	{
+		orders = new ArrayList<Order>();
 		name = l_name;
 		email  = l_email;
 		address = l_address;
@@ -17,7 +20,7 @@ public class Account {
 		Phone = l_phone;
 	}
 	public String make(Order order) {
-		
+		orders.add(order);
 		return "ok";
 	}
 	public String getName() {
